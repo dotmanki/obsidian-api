@@ -10,6 +10,7 @@ This is a personal project developed with node, typescript and express.
 
 * npm
 * node
+* [Local REST API(obsidian)](https://coddingtonbear.github.io/obsidian-local-rest-api/)
 
 ### Installing
 
@@ -38,4 +39,4 @@ This project is licensed under the dotmanki License - see the LICENSE.md file fo
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* ([https://github.com/matiassingers/awesome-readme](https://coddingtonbear.github.io/obsidian-local-rest-api/)
+* [https://github.com/matiassingers/awesome-readme](https://coddingtonbear.github.io/obsidian-local-rest-api/)
