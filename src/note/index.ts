@@ -78,7 +78,7 @@ const createContent = (note: Note) => {
     note.type === 'TESTING'
       ? '[!!|flask-conical|type:testing|var(--color-orange-rgb)]'
       : note.type === 'DESARROLLONV' || note.type === 'DESARROLLO'
-      ? '[!!|file-code|type:desarrollo|var(--color-blue-rgb)]'
+      ? '[!!|file-code|type:desarrollo|var(--color-cyan-rgb)]'
       : '[!!|file-up|type:implementacion|var(--color-yellow-rgb)]'
 
   return `\`${badge}\`\n# Detalle:\n${note.title}\n\n# Comentarios:\n ${note.content}`
