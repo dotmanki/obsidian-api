@@ -1,6 +1,7 @@
 export default interface Note {
-  title: string;
-  content: string;
-  client: string;
-  id: string;
+  title: string
+  content: string
+  type: 'TESTING' | 'DESARROLLO' | 'DESARROLLONV' | 'IMPLEMENTA'
+  client: string
+  id: string
 }
