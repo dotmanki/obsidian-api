@@ -71,6 +71,7 @@ const createNote = (note: any) => ({
   type: note.tipo_serv,
   client: note.nom_enti,
   id: note.numero,
+  originalId: note.numero_ori,
 })
 
 const createContent = (note: Note) => {
@@ -81,7 +82,9 @@ const createContent = (note: Note) => {
       ? '[!!|file-code|type:desarrollo|var(--color-cyan-rgb)]'
       : '[!!|file-up|type:implementacion|var(--color-yellow-rgb)]'
 
-  return `\`${badge}\`\n# Detalle:\n${note.title}\n\n# Comentarios:\n ${note.content}`
+  return `${
+    !!note.originalId && '[[' + note.originalId + ']]\n'
+  }\`${badge}\`\n# Detalle:\n${note.title}\n\n# Comentarios:\n ${note.content}`
 }
 
 export default router

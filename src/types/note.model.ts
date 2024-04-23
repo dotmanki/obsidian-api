@@ -4,4 +4,5 @@ export default interface Note {
   type: 'TESTING' | 'DESARROLLO' | 'DESARROLLONV' | 'IMPLEMENTA'
   client: string
   id: string
+  originalId?: string
 }
