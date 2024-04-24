@@ -83,7 +83,7 @@ const createContent = (note: Note) => {
       : '[!!|file-up|type:implementacion|var(--color-yellow-rgb)]'
 
   return `${
-    !!note.originalId && '[[' + note.originalId + ']]\n'
+    !!note.originalId && '[[' + note.client + '/' + note.originalId + ']]\n'
   }\`${badge}\`\n# Detalle:\n${note.title}\n\n# Comentarios:\n ${note.content}`
 }
 
