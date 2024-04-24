@@ -78,7 +78,7 @@ const createContent = (note: Note) => {
   const badge =
     note.type === 'TESTING'
       ? '[!!|flask-conical|type:testing|var(--color-orange-rgb)]'
-      : note.type === 'DESARROLLONV' || note.type === 'DESARROLLO'
+      : note.type === 'DESARROLNV' || note.type === 'DESARROLLO'
       ? '[!!|file-code|type:desarrollo|var(--color-cyan-rgb)]'
       : '[!!|file-up|type:implementacion|var(--color-yellow-rgb)]'
 
