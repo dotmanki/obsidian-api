@@ -82,9 +82,14 @@ const createContent = (note: Note) => {
       ? '[!!|file-code|type:desarrollo|var(--color-cyan-rgb)]'
       : '[!!|file-up|type:implementacion|var(--color-yellow-rgb)]'
 
+  const formattedContent = urlFormat(note.content)
+  note.content = formattedContent
   return `${
     !!note.originalId && '[[' + note.client + '/' + note.originalId + ']]\n'
   }\`${badge}\`\n# Detalle:\n${note.title}\n\n# Comentarios:\n ${note.content}`
 }
+
+const urlFormat = (content: string) =>
+  content.replace('class=', '&class=').replace('id=', '&id=')
 
 export default router
