@@ -66,8 +66,9 @@ router.post('/:numero', (req, res) => {
 })
 
 const createNote = (note: any) => ({
-  title: note.detalle,
-  content: note.comentario,
+  title: note.titulo_,
+  content: note.detalle,
+  description: note.comentario,
   type: note.tipo_serv,
   client: note.nom_enti,
   id: note.numero,
@@ -86,7 +87,9 @@ const createContent = (note: Note) => {
   note.content = formattedContent
   return `${
     !!note.originalId && '[[' + note.client + '/' + note.originalId + ']]\n'
-  }\`${badge}\`\n# Detalle:\n${note.title}\n\n# Comentarios:\n ${note.content}`
+  }\`${badge}\`\n# Detalle:\n## ${note.title} \n${
+    note.content
+  }\n\n# Comentarios:\n ${note.description}`
 }
 
 const urlFormat = (content: string) =>
