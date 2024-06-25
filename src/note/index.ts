@@ -83,8 +83,8 @@ const createContent = (note: Note) => {
       ? '[!!|file-code|type:desarrollo|var(--color-cyan-rgb)]'
       : '[!!|file-up|type:implementacion|var(--color-yellow-rgb)]'
 
-  const formattedContent = urlFormat(note.content)
-  note.content = formattedContent
+  const formattedDescription = urlFormat(note.description)
+  note.description = formattedDescription
   return `${
     !!note.originalId && '[[' + note.client + '/' + note.originalId + ']]\n'
   }\`${badge}\`\n# Detalle:\n## ${note.title} \n${
@@ -92,7 +92,7 @@ const createContent = (note: Note) => {
   }\n\n# Comentarios:\n ${note.description}`
 }
 
-const urlFormat = (content: string) =>
-  content.replace('class=', '&class=').replace('id=', '&id=')
+const urlFormat = (text: string) =>
+  text.replace('class=', '&class=').replace('id=', '&id=')
 
 export default router
